@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi - Backup (1)", "WebApi - Backup (1).csproj", "{2F3DE54E-8939-4294-95F7-9F95B13E06C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi - Backup", "WebApi - Backup.csproj", "{7E1184BE-5618-49F6-9C1D-24164C575D31}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi.csproj", "{B5A3F2B8-5DFE-49AF-88D1-B31D1FB05817}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F3DE54E-8939-4294-95F7-9F95B13E06C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F3DE54E-8939-4294-95F7-9F95B13E06C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F3DE54E-8939-4294-95F7-9F95B13E06C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F3DE54E-8939-4294-95F7-9F95B13E06C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E1184BE-5618-49F6-9C1D-24164C575D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E1184BE-5618-49F6-9C1D-24164C575D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E1184BE-5618-49F6-9C1D-24164C575D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E1184BE-5618-49F6-9C1D-24164C575D31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5A3F2B8-5DFE-49AF-88D1-B31D1FB05817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5A3F2B8-5DFE-49AF-88D1-B31D1FB05817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5A3F2B8-5DFE-49AF-88D1-B31D1FB05817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5A3F2B8-5DFE-49AF-88D1-B31D1FB05817}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB952E4E-07CA-4599-B17F-649B277B815A}
+	EndGlobalSection
+EndGlobal

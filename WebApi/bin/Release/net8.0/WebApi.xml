@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:WebApi.Application.Mapping.DomainToDTOMapping">
+            <summary>
+            Mapeamento de classes de domínio para DTOs.
+            </summary>
+        </member>
+        <member name="M:WebApi.Application.Mapping.DomainToDTOMapping.#ctor">
+            <summary>
+            Inicializa um novo instância de <see cref="T:WebApi.Application.Mapping.DomainToDTOMapping"/>.
+            </summary>
+        </member>
+        <member name="T:WebApi.Application.Services.TokenService">
+            <summary>
+            Serviço para geração de tokens JWT.
+            </summary>
+        </member>
+        <member name="M:WebApi.Application.Services.TokenService.GenerateToken(WebApi.Domain.Model.EmployeeAggregate.Employee)">
+            <summary>
+            Gera um token JWT para o funcionário especificado.
+            </summary>
+            <param name="employee">O funcionário para o qual gerar o token.</param>
+            <returns>O token JWT gerado.</returns>
+        </member>
+        <member name="T:WebApi.Application.ViewModel.EmployeeViewModel">
+            <summary>
+            ViewModel para representar os dados de um funcionário.
+            </summary>
+        </member>
+        <member name="P:WebApi.Application.ViewModel.EmployeeViewModel.Name">
+            <summary>
+            Obtém ou define o nome do funcionário.
+            </summary>
+        </member>
+        <member name="P:WebApi.Application.ViewModel.EmployeeViewModel.Age">
+            <summary>
+            Obtém ou define a idade do funcionário.
+            </summary>
+        </member>
+        <member name="P:WebApi.Application.ViewModel.EmployeeViewModel.Photo">
+            <summary>
+            Obtém ou define a foto do funcionário.
+            </summary>
+        </member>
+        <member name="T:WebApi.Application.ViewModel.PersonViewModel">
+            <summary>
+            ViewModel para representar os dados de uma pessoa.
+            </summary>
+        </member>
+        <member name="P:WebApi.Application.ViewModel.PersonViewModel.Name">
+            <summary>
+            Obtém ou define o nome da pessoa.
+            </summary>
+        </member>
+        <member name="P:WebApi.Application.ViewModel.PersonViewModel.Age">
+            <summary>
+            Obtém ou define a idade da pessoa.
+            </summary>
+        </member>
+        <member name="T:WebApi.Controllers.AuthController">
+            <summary>
+            Controller responsável pela autenticação na API.
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.AuthController.Auth(System.String,System.String)">
+            <summary>
+            Autentica um usuário com base no nome de usuário e senha fornecidos.
+            </summary>
+            <param name="username">Nome de usuário.</param>
+            <param name="password">Senha.</param>
+            <returns>Token de autenticação.</returns>
+        </member>
+        <member name="T:WebApi.Controllers.ThrowController">
+            <summary>
+            Controller para manipulação de erros.
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.ThrowController.HandleError">
+            <summary>
+            Manipula erros de maneira genérica.
+            </summary>
+            <returns>Problema genérico.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.ThrowController.HandleErrorDevelopment(Microsoft.Extensions.Hosting.IHostEnvironment)">
+            <summary>
+            Manipula erros em ambiente de desenvolvimento.
+            </summary>
+            <param name="hostEnvironment">Ambiente de hospedagem.</param>
+            <returns>Problema com detalhes do erro em ambiente de desenvolvimento.</returns>
+        </member>
+        <member name="T:WebApi.Controllers.v1.EmployeeController">
+            <summary>
+            Controlador para lidar com operações relacionadas a funcionários.
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.v1.EmployeeController.#ctor(WebApi.Domain.Model.EmployeeAggregate.IEmployeeRepository,Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.v1.EmployeeController},AutoMapper.IMapper)">
+            <summary>
+            Inicializa uma nova instância de <see cref="T:WebApi.Controllers.v1.EmployeeController"/>.
+            </summary>
+            <param name="employeeRepository">O repositório de funcionários.</param>
+            <param name="logger">O logger.</param>
+            <param name="mapper">O mapeador.</param>
+        </member>
+        <member name="M:WebApi.Controllers.v1.EmployeeController.Add(WebApi.Application.ViewModel.EmployeeViewModel)">
+            <summary>
+            Adiciona um novo funcionário.
+            </summary>
+            <param name="employeeView">Os dados do funcionário a serem adicionados.</param>
+            <returns>O resultado da operação.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.EmployeeController.DownloadPhoto(System.Int32)">
+            <summary>
+            Faz o download da foto de um funcionário.
+            </summary>
+            <param name="id">O ID do funcionário.</param>
+            <returns>O arquivo de imagem do funcionário.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.EmployeeController.Get(System.Int32,System.Int32)">
+            <summary>
+            Obtém uma página de funcionários.
+            </summary>
+            <param name="pageNumber">O número da página.</param>
+            <param name="pageQuantity">A quantidade de funcionários por página.</param>
+            <returns>A página de funcionários.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.EmployeeController.Search(System.Int32)">
+            <summary>
+            Busca um funcionário pelo ID.
+            </summary>
+            <param name="id">O ID do funcionário.</param>
+            <returns>O funcionário encontrado.</returns>
+        </member>
+        <member name="T:WebApi.Controllers.v1.PersonController">
+            <summary>
+            Controlador para lidar com operações relacionadas a pessoas.
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.v1.PersonController.#ctor(WebApi.Domain.Repositories.IPersonRepository)">
+            <summary>
+            Inicializa uma nova instância de <see cref="T:WebApi.Controllers.v1.PersonController"/>.
+            </summary>
+            <param name="personRepository">O repositório de pessoas.</param>
+        </member>
+        <member name="M:WebApi.Controllers.v1.PersonController.Add(WebApi.Application.ViewModel.PersonViewModel)">
+            <summary>
+            Adiciona uma nova pessoa.
+            </summary>
+            <param name="personView">Os dados da pessoa a serem adicionados.</param>
+            <returns>O resultado da operação.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.PersonController.Get(System.Int32)">
+            <summary>
+            Obtém uma pessoa pelo ID.
+            </summary>
+            <param name="id">O ID da pessoa.</param>
+            <returns>A pessoa encontrada.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.PersonController.Update(System.Int32,WebApi.Application.ViewModel.PersonViewModel)">
+            <summary>
+            Atualiza uma pessoa existente.
+            </summary>
+            <param name="id">O ID da pessoa a ser atualizada.</param>
+            <param name="personView">Os novos dados da pessoa.</param>
+            <returns>O resultado da operação.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.PersonController.Delete(System.Int32)">
+            <summary>
+            Exclui uma pessoa pelo ID.
+            </summary>
+            <param name="id">O ID da pessoa a ser excluída.</param>
+            <returns>O resultado da operação.</returns>
+        </member>
+        <member name="T:WebApi.Domain.DTOs.EmployeeDTO">
+            <summary>
+            DTO (Data Transfer Object) para representar informações simplificadas de um funcionário.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.DTOs.EmployeeDTO.Id">
+            <summary>
+            ID do funcionário.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.DTOs.EmployeeDTO.NameEmployee">
+            <summary>
+            Nome do funcionário.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.DTOs.EmployeeDTO.Photo">
+            <summary>
+            Foto do funcionário (opcional).
+            </summary>
+        </member>
+        <member name="T:WebApi.Domain.DTOs.PersonDTO">
+            <summary>
+            DTO (Data Transfer Object) para representar informações simplificadas de uma pessoa.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.DTOs.PersonDTO.Id">
+            <summary>
+            ID da pessoa.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.DTOs.PersonDTO.Name">
+            <summary>
+            Nome da pessoa.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.DTOs.PersonDTO.Age">
+            <summary>
+            Idade da pessoa.
+            </summary>
+        </member>
+        <member name="T:WebApi.Domain.Model.CompanyAggregate.Company">
+            <summary>
+            Representa uma empresa.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.Model.CompanyAggregate.Company.Id">
+            <summary>
+            Obtém ou define o ID da empresa.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.Model.CompanyAggregate.Company.Nome">
+            <summary>
+            Obtém ou define o nome da empresa.
+            </summary>
+        </member>
+        <member name="T:WebApi.Domain.Model.EmployeeAggregate.Employee">
+            <summary>
+            Representa um funcionário na aplicação.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.Model.EmployeeAggregate.Employee.id">
+            <summary>
+            ID do funcionário.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.Model.EmployeeAggregate.Employee.name">
+            <summary>
+            Nome do funcionário.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.Model.EmployeeAggregate.Employee.age">
+            <summary>
+            Idade do funcionário.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.Model.EmployeeAggregate.Employee.photo">
+            <summary>
+            Caminho para a foto do funcionário.
+            </summary>
+        </member>
+        <member name="M:WebApi.Domain.Model.EmployeeAggregate.Employee.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="M:WebApi.Domain.Model.EmployeeAggregate.Employee.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Construtor que inicializa um funcionário com nome, idade e foto.
+            </summary>
+            <param name="name">Nome do funcionário.</param>
+            <param name="age">Idade do funcionário.</param>
+            <param name="photo">Caminho para a foto do funcionário.</param>
+        </member>
+        <member name="T:WebApi.Domain.Model.EmployeeAggregate.IEmployeeRepository">
+            <summary>
+            Interface para o repositório de funcionários.
+            </summary>
+        </member>
+        <member name="M:WebApi.Domain.Model.EmployeeAggregate.IEmployeeRepository.Add(WebApi.Domain.Model.EmployeeAggregate.Employee)">
+            <summary>
+            Adiciona um funcionário.
+            </summary>
+            <param name="employee">Funcionário a ser adicionado.</param>
+        </member>
+        <member name="M:WebApi.Domain.Model.EmployeeAggregate.IEmployeeRepository.Get(System.Int32,System.Int32)">
+            <summary>
+            Obtém uma lista paginada de funcionários.
+            </summary>
+            <param name="pageNumber">Número da página.</param>
+            <param name="pageQuantity">Quantidade de funcionários por página.</param>
+            <returns>Lista paginada de funcionários.</returns>
+        </member>
+        <member name="M:WebApi.Domain.Model.EmployeeAggregate.IEmployeeRepository.Get(System.Int32)">
+            <summary>
+            Obtém um funcionário pelo ID.
+            </summary>
+            <param name="id">ID do funcionário a ser obtido.</param>
+            <returns>O funcionário encontrado, ou null se não encontrado.</returns>
+        </member>
+        <member name="T:WebApi.Domain.Model.PersonAggregate.Person">
+            <summary>
+            Representa uma pessoa.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.Model.PersonAggregate.Person.Id">
+            <summary>
+            Obtém ou define o ID da pessoa.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.Model.PersonAggregate.Person.Name">
+            <summary>
+            Obtém ou define o nome da pessoa.
+            </summary>
+        </member>
+        <member name="P:WebApi.Domain.Model.PersonAggregate.Person.Age">
+            <summary>
+            Obtém ou define a idade da pessoa.
+            </summary>
+        </member>
+        <member name="T:WebApi.Domain.Repositories.IPersonRepository">
+            <summary>
+            Interface para o repositório de pessoas.
+            </summary>
+        </member>
+        <member name="M:WebApi.Domain.Repositories.IPersonRepository.GetByIdAsync(System.Int32)">
+            <summary>
+            Obtém uma pessoa pelo ID de forma assíncrona.
+            </summary>
+            <param name="id">ID da pessoa a ser obtida.</param>
+            <returns>A pessoa encontrada.</returns>
+        </member>
+        <member name="M:WebApi.Domain.Repositories.IPersonRepository.GetAllAsync">
+            <summary>
+            Obtém todas as pessoas de forma assíncrona.
+            </summary>
+            <returns>Lista de todas as pessoas.</returns>
+        </member>
+        <member name="M:WebApi.Domain.Repositories.IPersonRepository.AddAsync(WebApi.Domain.Model.PersonAggregate.Person)">
+            <summary>
+            Adiciona uma pessoa de forma assíncrona.
+            </summary>
+            <param name="person">Pessoa a ser adicionada.</param>
+            <returns>O ID da pessoa adicionada.</returns>
+        </member>
+        <member name="M:WebApi.Domain.Repositories.IPersonRepository.UpdateAsync(System.Int32,WebApi.Domain.Model.PersonAggregate.Person)">
+            <summary>
+            Atualiza uma pessoa de forma assíncrona.
+            </summary>
+            <param name="id">ID da pessoa a ser atualizada.</param>
+            <param name="person">Pessoa com os novos dados.</param>
+        </member>
+        <member name="M:WebApi.Domain.Repositories.IPersonRepository.DeleteAsync(System.Int32)">
+            <summary>
+            Deleta uma pessoa de forma assíncrona.
+            </summary>
+            <param name="id">ID da pessoa a ser deletada.</param>
+        </member>
+        <member name="T:WebApi.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApi.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApi.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApi.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:WebApi.Migrations.TABELAS_PERSON">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApi.Migrations.TABELAS_PERSON.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApi.Migrations.TABELAS_PERSON.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApi.Migrations.TABELAS_PERSON.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
